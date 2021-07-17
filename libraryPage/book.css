@@ -1,0 +1,298 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h6{
+    font-weight: bold;
+    margin-bottom: 0;
+}
+h3,h4,h5{
+    font-weight: bold;
+}
+
+.arrow-active{
+    transform: rotateX(180deg);
+}
+
+section .container{
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-column-gap: 2rem;
+}
+
+.left-side span{
+    color: #DFE3E4;
+    font-size: 30px;
+    margin: 0;
+}
+
+.left-side{
+	border-right: 1px solid #dbdbdb;
+	padding: 0 1.5rem;
+}
+
+.book .book-content, .author .author-content{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.book .book-content .book-img img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.book .book-content .more-detail{
+    display: none;
+}
+
+.book-content .more-detail tr td{
+    padding: 0 1.5rem 0rem 0rem;
+}
+
+.author-content .author-img img{
+	border-radius: 50%;
+	height: 225px;
+	width: 225px;
+	object-fit: cover;
+}
+  
+  .review-stars label{
+	  text-shadow: 1px 2px 2px black;
+  }
+  
+  /*end decoration*/
+  
+  .visuallyhidden{
+	position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px);
+  }
+  .review-stars label:after{
+	  content: "★";
+	  color: inherit;
+	  -webkit-transform: scale(4);
+	  position: absolute;
+	  z-index: 4;
+	  left: 0px;
+	  transition: all .4s;
+	  opacity: 0;
+	  color: inherit;
+	  visibility: hidden;
+	 
+  }
+  
+  .review-stars input:checked + label:after{
+	  visibility: visible;
+	  -webkit-transform: scale(1);
+	  opacity: 1;
+  }
+  
+  .review-stars  {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	text-align: left;  
+  }
+  
+  .review-stars label{
+	  font-family: "icomoon";
+	  font-size: 2em;
+	  position: relative;
+	  cursor: pointer;
+	  color: #DFE3E4;
+  }
+  .review-stars input:checked ~ label:before{
+	  opacity: 1;
+  }
+  .review-stars:hover input ~ label:before{
+	  opacity: 0;
+  }
+  
+  .review-stars input + label:before{
+	  content: "\2605";
+	  position: absolute;
+	  right: 0;
+	  opacity: 0;
+	  transition: opacity .3s ease-in-out, color .3s ease-in-out;
+	  backface-visibility:hidden;
+		-webkit-backface-visibility:hidden;
+  		-moz-backface-visibility:hidden;
+  		-ms-backface-visibility:hidden;
+  }
+  .review-stars input + label:hover:before,
+  .review-stars input + label:hover ~ label:before
+  {
+	  opacity: 1;
+  }
+  .review-stars input + label:nth-of-type(1):after,
+  .review-stars input + label:nth-of-type(1):before,
+  .review-stars input +  label:nth-of-type(1):hover:before,
+  .review-stars input + label:nth-of-type(1):hover ~ label:before,
+  .review-stars input:nth-of-type(1):checked ~ label:before{
+	  color: #2ecc71;
+  }
+  .review-stars input + label:nth-of-type(2):after,
+  .review-stars input + label:nth-of-type(2):before,
+  .review-stars input + label:nth-of-type(2):hover:before,
+  .review-stars input + label:nth-of-type(2):hover ~ label:before,
+  .review-stars input:nth-of-type(2):checked ~ label:before{
+	  color: #f1c40f;
+  }
+  .review-stars input + label:nth-of-type(3):after,
+  .review-stars input + label:nth-of-type(3):before,
+  .review-stars input + label:nth-of-type(3):hover:before,
+  .review-stars input + label:nth-of-type(3):hover ~ label:before,
+  .review-stars input:nth-of-type(3):checked ~ label:before{
+	  color: #F39C12;
+  }
+  .review-stars input + label:nth-of-type(4):after,
+  .review-stars input + label:nth-of-type(4):before,
+  .review-stars input + label:nth-of-type(4):hover:before,
+  .review-stars input + label:nth-of-type(4):hover ~ label:before,
+  .review-stars input:nth-of-type(4):checked ~ label:before{
+	  color: #e74c3c;
+  }
+  
+  .review-stars input + label:nth-of-type(5):after,
+  .review-stars input + label:nth-of-type(5):before,
+  .review-stars label:nth-of-type(5):hover:before,
+  .review-stars input:nth-of-type(5):checked ~ label:before{
+	  color: #d35400;
+  }
+  
+  .review-stars label:nth-of-type(5):hover:before{
+	  color: #d35400 !important;
+  }
+
+.other-book{
+	height: 230px;
+	padding: 2rem 0;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.other-book .book-img{
+	width: 115px;
+	height: 165px;
+	float: left;
+}
+
+.other-book img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+.other-book .book-detail{
+	float: left;
+	margin: 0.25rem 0 0 1rem;
+}
+
+.other-book .book-detail p{
+	margin-bottom: 5px;
+}
+
+.other-book .book-detail span{
+	color: #DFE3E4;
+	font-size: 20px;
+}
+
+.btn-custom {
+	width: 115px;
+	height: 35px;
+	color: #fff;
+	/* border-radius: 5px; */
+	border: none;
+	padding: 0;
+	line-height: 36px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	/* background: linear-gradient(0deg, rgba(255,151,0,1) 0%, rgba(251,75,2,1) 100%); */
+	background-color: #000;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	display: inline-block;
+	box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+	 	7px 7px 20px 0px rgba(0,0,0,.1),
+		4px 4px 5px 0px rgba(0,0,0,.1);
+	outline: none;
+    margin:8px 0px 16px;
+}
+	
+.btn-custom span {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: #fff;
+    font-size: 14px;
+}
+.btn-custom:before,
+.btn-custom:after {
+	position: absolute;
+	content: "";
+	right: 0;
+	bottom: 0;
+	/* background: rgba(251,75,2,1); */
+	background: #000;
+	box-shadow:
+		-7px -7px 20px 0px rgba(255,255,255,.9),
+		-4px -4px 5px 0px rgba(255,255,255,.9),
+		7px 7px 20px 0px rgba(0,0,0,.2),
+		4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
+}
+.btn-custom:before{
+	height: 0%;
+	width: 2px;
+}
+.btn-custom:after {
+	height: 2px;
+	width: 0%;
+}
+.btn-custom:hover{
+	/* color: rgba(251,75,2,1); */
+	color: #000;
+	background: #fff;
+}
+.btn-custom:hover span{
+	color: #000;
+}
+
+.btn-custom:hover:before {
+	height: 100%;
+}
+.btn-custom:hover:after {
+	width: 100%;
+}
+.btn-custom span:before,
+.btn-custom span:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	/* background: rgba(251,75,2,1); */
+	background: #000;
+	box-shadow:
+		-7px -7px 20px 0px rgba(255,255,255,.9),
+		-4px -4px 5px 0px rgba(255,255,255,.9),
+		7px 7px 20px 0px rgba(0,0,0,.2),
+		4px 4px 5px 0px rgba(0,0,0,.3);
+	transition: all 0.3s ease;
+}
+.btn-custom span:before {
+	width: 2px;
+	height: 0%;
+}
+.btn-custom span:after {
+	height: 2px;
+	width: 0%;
+}
+.btn-custom span:hover:before {
+	height: 100%;
+}
+.btn-custom span:hover:after {
+	width: 100%;
+}	
